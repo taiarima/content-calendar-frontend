@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 interface Content {
   id: number;
   title: string;
-  desc: string;
+  descr: string;
   status: string;
   contentType: string;
   dateCreated: string | null;
@@ -26,7 +26,7 @@ export default function Home() {
         setData(jsonData);
       } catch (error) {
         console.error(
-          "There has been a problem with your fetch operation:",
+          "There has been a problem with the fetch operation:",
           error
         );
       }
@@ -45,7 +45,7 @@ export default function Home() {
               <div key={index}>
                 <div>ID: {content.id}</div>
                 <div>Title: {content.title}</div>
-                <div>Description: {content.desc}</div>
+                <div>Description: {content.descr}</div>
                 <div>Status: {content.status}</div>
                 <div>Content Type: {content.contentType}</div>
                 <div>Date Created: {content.dateCreated || "N/A"}</div>
